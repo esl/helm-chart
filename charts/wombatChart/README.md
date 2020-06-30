@@ -7,7 +7,7 @@ WombatOAM (or Wombat for short) is an **operations and maintenance tool** for
 
 The docker image contains the 
 
-###Prerequisites:
+### Prerequisites:
 1. Define a `values.yaml` file for the necessary environment variables
      * Define the following parameters under `kubernetesDiscovery` in order to automatically 
      add them to WombatOAM
@@ -17,12 +17,12 @@ The docker image contains the
         * cookie
     * Define `hostPath` where WombatOAM is located inside the pod
 
-###Installation:
+### Installation:
 1. Execute the following command to install WombatOAM: `helm install -f myvalues.yaml wombat stable/wombat`
 2. GUI is accessible at `localhost:8080`
 3. Log in with the username `admin` and password `admin`
 
-###Uninstallation:
+### Uninstallation:
 1. To uninstall WombatOAM run the following command: `helm uninstall wombat`
 
 To learn more about the application please visit the [documentation][] webpage.
