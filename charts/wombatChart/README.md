@@ -5,7 +5,7 @@ WombatOAM (or Wombat for short) is an **operations and maintenance tool** for
 
 ## Wombat Installation
 
-The docker image contains the 
+The docker image contains the all the necessary prerequisites (Erlang) to run WombatOAM.
 
 ### Prerequisites:
 1. Define a `values.yaml` file for the necessary environment variables
