@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  wombat:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-06-30T13:43:07.484279+02:00"
+    description: An operations, monitoring, maintenance, and performance for Erlang
+      OTP based systems running inside Kubernetes.
+    digest: 8308fb0d66facda43307bf3d1d0760175921f58bacac3c1efaa45f5fe4e1ef52
+    home: https://www.erlang-solutions.com/products/wombatoam.html
+    icon: https://esl-web-static.s3.amazonaws.com/uploads/image/file/9/Logo_-_Wombat.png
+    keywords:
+    - erlang
+    - wombat
+    - monitoring
+    - metrics
+    maintainers:
+    - email: mohamed.ali.khechine@erlang-solutions.com
+      name: Mohamed Ali Khechine
+    - email: tamas.lengyel@erlang-solutions.com
+      name: Tamás Lengyel
+    name: wombat
+    type: application
+    urls:
+    - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
+    version: 3.7.0
+generated: "2020-06-30T13:43:07.482507+02:00"
