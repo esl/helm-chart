@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wombat
+  namespace: monitoring
+  labels:
+    app: wombat
+spec:
+  containers:
+  - name: wombat
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 500m
+        memory: 1Gi
+    image: erlangsolutions/wombatoam:latest
+    ports:
+    - containerPort: 8080
+    env:
+    - name: WOMBAT_NODENAME
+      value: wombat@0.0.0.0
+    - name: SERVICE_NAME
+      value: {{ .Values.kubernetesDiscovery.service }}
+    - name: CLUSTER_COOKIE
+      value: {{ .Values.kubernetesDiscovery.cookie }}
+    - name: APPLICATION_NAME
+      value: {{ .Values.kubernetesDiscovery.appname }}
+    - name: NAMESPACE
+      value: {{ .Values.kubernetesDiscovery.namespace }}
+  volumes:
+  - name: wombat-data
+    hostPath:
+      path: {{ .Values.hostPath }}/data
+      type: DirectoryOrCreate
+  - name: wombat-logs
+    hostPath:
+      path: {{ .Values.hostPath }}/logs
+      type: DirectoryOrCreate
+  - name: wombat-license
+    hostPath:
+      path: {{ .Values.hostPath }}/ftech.lic_key
+      type: File

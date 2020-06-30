@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wombat
+  namespace: monitoring
+spec:
+  selector:
+    app: wombat
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 8080

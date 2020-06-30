@@ -1,0 +1,116 @@
+Thank you for installing WombatOAM 3.7.0.
+
+New in this version
+-------------------
+
+WombatOAM 3.7.0 contains the following improvements over the
+previous release (version 3.6.4)
+
+* Kubernetes automatic cluster discovery.
+
+* EMQx agent.
+
+* Runtime column in the etop processes page.
+
+* Numerous bug fixes and usability enhancements are included.
+
+Known bugs and other possible problems
+
+Documentation
+-------------
+
+The documentation can be found inside the WombatOAM package:
+
+  - in PDF format (as Wombat-Manual.pdf);
+  - in HTML format (in the doc/html directory);
+  - in textual format (in the doc/text directory).
+
+The documentation is also available by clicking on Documentation on the WombatOAM's Web
+Dashboard.
+
+Evaluating WombatOAM
+--------------------
+
+Once you have successfully installed WombatOAM, you can try out WombatOAM by
+opening a web browser and hitting http://localhost:8080. Enter
+admin/admin in the appearing login window. To see what functionalities
+are available, add WombatOAM itself to WombatOAM (node: wombat@127.0.0.1,
+cookie: wombat).
+
+WombatOAM features
+------------------
+
+WombatOAM provides the following features for Erlang and Elixir systems,
+among others:
+
+* It detects anomalies and early warning signs, and presents them in
+  the form of alarms and notifications, so that the problems can be
+  resolved before they cause service disruption.
+
+* It provides live information about running systems, helps recover
+  from outages for instance by forcing the GC to free up memory, or
+  fix misconfiguration issues by changing configuration parameters.
+
+* The monitoring functionality is divided into plugins, which run on
+  the managed node and send information (metrics, notifications and
+  alarms) to WombatOAM. A set of built-in plugins are shipped with
+  WombatOAM, which can be turned on and off for each individual managed
+  node.
+
+* It ensures seamless integration with your existing OAM
+  infrastructure by having existing integration with Graphite,
+  DataDog, Graylog, Cacti, Nagios, Splunk, Logstash and PagerDuty
+  with the capability of being integrated with any of the other OAM tools.
+
+* It provides both a Web Dashboard and a REST interface: the former
+  for interactive use, and the latter to support automation and
+  integration.
+
+* It visualizes the node topology and shows information about the
+  nodes such as the application versions running on them.
+
+* It collects more than a hundred built-in metrics about the Erlang
+  VM, such as the amount of memory allocated for different purposes
+  (atom memory, binary memory, etc), and the sum of the length of the
+  message queues of all processes.
+
+* It automatically collects all metrics from the folsom and exometer
+  libraries, all logs from the SASL error_logger, lager and Elixir's
+  Logger libraries, and all alarms from the SASL alarm_handler and elarm
+  libraries.
+
+* The web dashboard can plot both historic metrics and live metrics.
+  Different metrics can be placed on the same graph.
+
+* Besides numeric metrics such as counter and gauges, it supports
+  meters, spirals and histograms.
+
+* It can deploy Erlang nodes in the cloud or on specified machines.
+
+--------------------------------------
+
+* When using SSL, the minimum recommended Erlang version for running
+  WombatOAM is R16B02. Without SSL the minimum required Erlang version is
+  still R15B03, and WombatOAM can still manage nodes running on R14B04
+  or later versions regardless of using SSL or not.
+
+* Some browsers refuse to accept the self-signed certificates shipped
+  with WombatOAM with certain Erlang/OTP versions. In that case you
+  should either install proper certificates or switch to HTTP. See the
+  "Configuration" section of the manual for the details.
+
+How to contact us
+-----------------
+
+If you have any questions or problems, please:
+
+* First check the WombatOAM Manual for the documentation.
+
+* If you don't find an answer there, please send an email to
+  wombat@erlang-solutions.com.
+
+* If you are facing a technical issue, please execute
+  scripts/wombat-debug.sh and send the generated tar ball to us.
+
+Regards,
+WombatOAM Team
