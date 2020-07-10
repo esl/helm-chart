@@ -16,6 +16,13 @@ spec:
         cpu: 500m
         memory: 1Gi
     image: erlangsolutions/wombatoam:latest
+    volumeMounts:
+    - mountPath: /wombat/data
+      name: wombat-data
+    - mountPath: /wombat/log
+      name: wombat-logs
+    - mountPath: /wombat/license.lic_key
+      name: wombat-license
     ports:
     - containerPort: 8080
     env:
@@ -40,5 +47,5 @@ spec:
       type: DirectoryOrCreate
   - name: wombat-license
     hostPath:
-      path: {{ .Values.hostPath }}/ftech.lic_key
+      path: {{ .Values.hostPath }}/license.lic_key
       type: File

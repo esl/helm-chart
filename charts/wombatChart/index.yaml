@@ -3,10 +3,10 @@ entries:
   wombat:
   - apiVersion: v2
     appVersion: 3.7.0
-    created: "2020-07-10T11:49:37.558541+02:00"
+    created: "2020-07-10T12:01:56.876881+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: f8ff55a5d2a15ab2a5fd7533a7bada6a4030df39a8b62e7aec353a6bdb255f0f
+    digest: 7399fbf4515865be409b4f505f353ea21ae957c88bcdac6942eaf4254701a359
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
@@ -24,4 +24,4 @@ entries:
     urls:
     - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
     version: 3.7.0
-generated: "2020-07-10T11:49:37.556742+02:00"
+generated: "2020-07-10T12:01:56.875779+02:00"
