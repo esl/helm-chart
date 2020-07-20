@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Before running the script make sure that helm and git are installed on your system.
+# Run the script inside the script folder with "./wombat CURRENT_WOMBAT_VERSION"
+
+vsn=$1
+
+cd ../charts
+helm package wombatChart/
+mv wombat-${vsn}.tgz wombatChart/
+helm repo index wombatChart --url https://esl.github.io/helm-chart/charts/wombatChart
+
+git add wombatChart/wombat-${vsn}.tgz
+git add wombatChart/index.yaml
+git add wombatChart/templates/NOTES.txt
+
+git commit -m"Update chart to version ${vsn}"
+git push origin master
+return
+
+
+
+
