@@ -17,3 +17,17 @@ maintainers:
   email: mohamed.ali.khechine@erlang-solutions.com
 - name: Tamás Lengyel
   email: tamas.lengyel@erlang-solutions.com
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Updated to WombatOAM version 4.1.15
+    - kind: added
+      description: ARM64 architecture support with dedicated image tag
+    - kind: changed
+      description: Increased default resource limits (2 CPU / 4Gi memory)
+    - kind: changed
+      description: Increased default resource requests (1 CPU / 2Gi memory)
+    - kind: changed
+      description: Made pod resources configurable via values.yaml
+    - kind: changed
+      description: Image reference now uses values instead of hardcoded
