@@ -8,14 +8,11 @@ metadata:
 spec:
   containers:
   - name: wombat
+    {{- if .Values.resources }}
     resources:
-      limits:
-        cpu: 1
-        memory: 1Gi
-      requests:
-        cpu: 500m
-        memory: 1Gi
-    image: erlangsolutions/wombatoam:latest
+      {{- toYaml .Values.resources | nindent 6 }}
+    {{- end }}
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
     volumeMounts:
     - mountPath: /wombat/data
       name: wombat-data

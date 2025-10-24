@@ -14,7 +14,7 @@ git add wombatChart/wombat-${vsn}.tgz
 git add wombatChart/index.yaml
 git add wombatChart/templates/NOTES.txt
 
-git commit -m"Update chart to version ${vsn}"
+git commit -m "Update chart to version ${vsn}"
 git push origin master
 return
 
