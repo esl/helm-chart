@@ -1,18 +1,10 @@
-Thank you for installing WombatOAM 3.7.0.
+Thank you for installing WombatOAM 4.1.15.
 
 New in this version
 -------------------
 
-WombatOAM 3.7.0 contains the following improvements over the
-previous release (version 3.6.4)
-
-* Kubernetes automatic cluster discovery.
-
-* EMQx agent.
-
-* Runtime column in the etop processes page.
-
-* Numerous bug fixes and usability enhancements are included.
+WombatOAM 4.1.15 contains numerous improvements, bug fixes, and
+enhancements over previous releases.
 
 Known bugs and other possible problems
 
