@@ -2,8 +2,8 @@ apiVersion: v2
 name: wombat
 description: An operations, monitoring, maintenance, and performance for Erlang OTP based systems running inside Kubernetes.
 type: application
-version: 4.1.15
-appVersion: 4.1.15
+version: 4.1.21
+appVersion: 4.1.21
 keywords:
 - erlang
 - wombat
@@ -20,7 +20,7 @@ maintainers:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: Updated to WombatOAM version 4.1.15
+      description: Updated to WombatOAM version 4.1.21
     - kind: added
       description: ARM64 architecture support with dedicated image tag
     - kind: changed
