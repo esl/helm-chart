@@ -10,7 +10,7 @@ entries:
     created: "2026-04-21T00:00:00.000000+00:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: a64797d7f27daea0f2ef5346082a526964630c0e1074ecac4b2d9d214383c459
+    digest: f2cbb79007e2a602a8fd96100660f58d336b8561ddcc7ef879e87491f99dc15b
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
