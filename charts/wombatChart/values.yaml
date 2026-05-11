@@ -8,7 +8,7 @@ image:
   repository: erlangsolutions/wombatoam
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "4.1.27"
+  tag: "4.1.28"
 
 imagePullSecrets: []
 nameOverride: ""
