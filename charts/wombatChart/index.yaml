@@ -4,10 +4,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Updated to WombatOAM version 4.1.28
+    apiVersion: v2
+    appVersion: 4.1.28
+    created: "2026-05-11T09:58:14.070025+02:00"
+    description: An operations, monitoring, maintenance, and performance for Erlang
+      OTP based systems running inside Kubernetes.
+    digest: f72d7115d492de2365bb9ec1f0d29a8e152beaaac901311c90bacaaf3c60e016
+    home: https://www.erlang-solutions.com/products/wombatoam.html
+    icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
+    keywords:
+    - erlang
+    - wombat
+    - monitoring
+    - metrics
+    maintainers:
+    - email: mohamed.ali.khechine@erlang-solutions.com
+      name: Mohamed Ali Khechine
+    - email: tamas.lengyel@erlang-solutions.com
+      name: Tamás Lengyel
+    name: wombat
+    type: application
+    urls:
+    - https://esl.github.io/helm-chart/charts/wombatChart/wombat-4.1.28.tgz
+    version: 4.1.28
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Updated to WombatOAM version 4.1.27
     apiVersion: v2
     appVersion: 4.1.27
-    created: "2026-05-08T13:30:40.524264+02:00"
+    created: "2026-05-11T09:58:14.068066+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
     digest: f2ed124b077cc03d0096a923eb9d5bda057eb4c33b8fc338b0874f2126164a52
@@ -36,7 +63,7 @@ entries:
           description: Native multi-arch image (arm64 and amd64) from Docker Hub, no architecture-specific tag required
     apiVersion: v2
     appVersion: 4.1.26
-    created: "2026-05-08T13:30:40.523608+02:00"
+    created: "2026-05-11T09:58:14.067432+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
     digest: 2a93823c4bd1b03d1396939a5c888412ca01dd6ec5a918f2c8ff23adaf7f7a55
@@ -63,7 +90,7 @@ entries:
           description: Updated to WombatOAM version 4.1.21
     apiVersion: v2
     appVersion: 4.1.21
-    created: "2026-05-08T13:30:40.523069+02:00"
+    created: "2026-05-11T09:58:14.066936+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
     digest: 7f68a9f5eee36d9b7aa41d64998e223f6e22a4752dcad7dc29c2d7805f142994
@@ -100,7 +127,7 @@ entries:
           description: Image reference now uses values instead of hardcoded
     apiVersion: v2
     appVersion: 4.1.15
-    created: "2026-05-08T13:30:40.522634+02:00"
+    created: "2026-05-11T09:58:14.066464+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
     digest: 79f51ab8f86d604d9887ea88f2ecccb6a72102f778a86f0e191915ea5efdf33c
@@ -123,7 +150,7 @@ entries:
     version: 4.1.15
   - apiVersion: v2
     appVersion: 3.7.0
-    created: "2026-05-08T13:30:40.522255+02:00"
+    created: "2026-05-11T09:58:14.065673+02:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
     digest: 7399fbf4515865be409b4f505f353ea21ae957c88bcdac6942eaf4254701a359
@@ -144,4 +171,4 @@ entries:
     urls:
     - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
     version: 3.7.0
-generated: "2026-05-08T13:30:40.521673+02:00"
+generated: "2026-05-11T09:58:14.065139+02:00"
