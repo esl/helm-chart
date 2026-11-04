@@ -25,9 +25,9 @@ The docker image contains the all the necessary prerequisites (Erlang) to run Wo
 ### Uninstallation:
 1. To uninstall WombatOAM run the following command: `helm uninstall wombat`
 
-To learn more about the application please visit the [documentations][] webpage.
+To learn more about the application please visit the [Documentation page][].
 
-[documentations]: https://wombat-docs.fly.dev/
+[Documentation page]: https://wombat-docs.fly.dev/
 
 ## Useful commands
 To use these commands it is needed to exec into the pod where WombatOAM is running.
