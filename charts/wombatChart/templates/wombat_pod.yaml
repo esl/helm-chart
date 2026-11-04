@@ -35,6 +35,10 @@ spec:
       value: {{ .Values.kubernetesDiscovery.namespace }}
     - name: ERL_EPMD_PORT
       value: {{ .Values.epmdPort | default 4369 | quote }}
+    {{- if .Values.kubernetesDiscovery.nodeExpiryHours }}
+    - name: NODE_EXPIRY_HOURS
+      value: {{ .Values.kubernetesDiscovery.nodeExpiryHours | quote }}
+    {{- end }}
   volumes:
   - name: wombat-data
     hostPath:

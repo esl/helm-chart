@@ -79,6 +79,10 @@ kubernetesDiscovery:
   service: ""
   appname: ""
   cookie: ""
+  # Optional: hours a discovered node may be missing from the service DNS
+  # before WombatOAM removes it. Leave empty to use WombatOAM's setting
+  # (kubernetes_node_expiry_hours in wombat.config, 120 hours by default).
+  nodeExpiryHours: ""
 
 hostPath: ""
 

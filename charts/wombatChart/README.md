@@ -15,6 +15,8 @@ The docker image contains the all the necessary prerequisites (Erlang) to run Wo
         * service
         * appname
         * cookie
+        * nodeExpiryHours (optional): hours a node may be missing from the service
+          DNS before WombatOAM removes it (default 120)
     * Define `hostPath` where WombatOAM is located inside the pod
 
 ### Installation:
