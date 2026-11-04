@@ -27,7 +27,7 @@ The docker image contains the all the necessary prerequisites (Erlang) to run Wo
 
 To learn more about the application please visit the [documentations][] webpage.
 
-[documentations]: https://s3.eu-central-1.amazonaws.com/www.wombat-docs.com/getting_started/index.html
+[documentations]: https://wombat-docs.fly.dev/
 
 ## Useful commands
 To use these commands it is needed to exec into the pod where WombatOAM is running.

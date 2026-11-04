@@ -11,7 +11,9 @@ Known bugs and other possible problems
 Documentation
 -------------
 
-The documentation can be found inside the WombatOAM package:
+The documentation is available online at https://wombat-docs.fly.dev/
+
+It can also be found inside the WombatOAM package:
 
   - in PDF format (as Wombat-Manual.pdf);
   - in HTML format (in the doc/html directory);
