@@ -33,6 +33,8 @@ spec:
       value: {{ .Values.kubernetesDiscovery.appname }}
     - name: NAMESPACE
       value: {{ .Values.kubernetesDiscovery.namespace }}
+    - name: ERL_EPMD_PORT
+      value: {{ .Values.epmdPort | default 4369 | quote }}
   volumes:
   - name: wombat-data
     hostPath:
