@@ -21,3 +21,6 @@ annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: Updated to WombatOAM version 4.2.2
+  artifacthub.io/links: |
+    - name: Documentation
+      url: https://wombat-docs.fly.dev/
