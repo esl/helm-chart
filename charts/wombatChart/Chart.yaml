@@ -2,8 +2,8 @@ apiVersion: v2
 name: wombat
 description: An operations, monitoring, maintenance, and performance for Erlang OTP based systems running inside Kubernetes.
 type: application
-version: 4.2.2
-appVersion: 4.2.2
+version: 4.2.3
+appVersion: 4.2.3
 keywords:
 - erlang
 - wombat
@@ -11,7 +11,7 @@ keywords:
 - metrics
 home: https://www.erlang-solutions.com/products/wombatoam.html
 icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
-depricated: false
+deprecated: false
 maintainers:
 - name: Mohamed Ali Khechine
   email: mohamed.ali.khechine@erlang-solutions.com
@@ -20,7 +20,7 @@ maintainers:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: Updated to WombatOAM version 4.2.2
+      description: Updated to WombatOAM version 4.2.3
   artifacthub.io/links: |
     - name: Documentation
       url: https://wombat-docs.fly.dev/
