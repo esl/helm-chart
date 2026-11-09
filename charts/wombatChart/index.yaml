@@ -9,15 +9,17 @@ entries:
           description: wombatConfig.enabled keeps wombat.config (settings saved from the GUI) in hostPath
         - kind: fixed
           description: The package no longer contains the older chart packages
+        - kind: changed
+          description: Install notes describe the Kubernetes installation and the WombatOAM version installed
       artifacthub.io/links: |
         - name: Documentation
           url: https://wombat-docs.fly.dev/
     apiVersion: v2
     appVersion: 4.2.3
-    created: "2026-11-09T19:35:33.264913+01:00"
+    created: "2026-11-09T19:39:27.175837+01:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: b75341ebf8777f79b9cc26fe9afc974a44e4e65bac02af33264918a418679d42
+    digest: ebb470d04dcd15f9ac8cbffa4c92f4bc90f47b4cf3cc6886f7401663eb86add7
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
@@ -44,10 +46,10 @@ entries:
           url: https://wombat-docs.fly.dev/
     apiVersion: v2
     appVersion: 4.2.2
-    created: "2026-11-09T18:13:40.91186+01:00"
+    created: "2026-11-09T19:39:27.1756+01:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: c2d9ac4cc7449aa3023bdb3a8347cd22752b9058ed98844d81a522eec29a7ca2
+    digest: 13059a67cc708c24079c23fb62c41c53c61785854a56a47aba35aa43e5b6e4ff
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
@@ -235,4 +237,4 @@ entries:
     urls:
     - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
     version: 3.7.0
-generated: "2026-11-09T19:35:33.264594+01:00"
+generated: "2026-11-09T19:39:27.175302+01:00"

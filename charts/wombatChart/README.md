@@ -20,8 +20,7 @@ The docker image contains the all the necessary prerequisites (Erlang) to run Wo
     * Define `hostPath` where WombatOAM is located inside the pod
     * Set `wombatConfig.enabled: true` (optional) to keep `wombat.config` in
       `<hostPath>/config`, so that settings saved from the GUI survive the pod
-      being recreated. Discovery settings set under `kubernetesDiscovery` are
-      read-only in the GUI: leave one empty to manage it from the GUI instead.
+      being recreated.
 
 ### Installation:
 1. Execute the following command to install WombatOAM: `helm install -f myvalues.yaml wombat stable/wombat`

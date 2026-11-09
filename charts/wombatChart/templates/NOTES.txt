@@ -1,110 +1,62 @@
-Thank you for installing WombatOAM 4.1.15.
+Thank you for installing WombatOAM {{ .Values.image.tag | default .Chart.AppVersion }}.
 
-New in this version
+Accessing WombatOAM
 -------------------
 
-WombatOAM 4.1.15 contains numerous improvements, bug fixes, and
-enhancements over previous releases.
+WombatOAM runs in the pod "wombat" in the namespace "monitoring", behind the
+service "wombat" (type LoadBalancer, port 8080). Without a load balancer,
+forward a local port:
 
-Known bugs and other possible problems
+  kubectl -n monitoring port-forward pod/wombat 8080:8080
+
+and open http://localhost:8080.
+
+Log in as admin/admin and change the password straight away, under
+Configuration > Change password, or from the command line:
+
+  kubectl -n monitoring exec wombat -- python3 /wombat/wombat-headless.py change_password --password <new password>
+
+Kubernetes discovery
+--------------------
+{{- $d := .Values.kubernetesDiscovery }}
+{{- if and $d.service $d.namespace $d.appname $d.cookie }}
+
+Pods behind the service "{{ $d.service }}" in the namespace "{{ $d.namespace }}"
+are added automatically as nodes named {{ $d.appname }}@<pod IP>.
+{{- else }}
+
+Kubernetes discovery is off: set all of kubernetesDiscovery.service, namespace,
+appname and cookie to add the pods of a service automatically. Nodes can always
+be added from the WombatOAM GUI.
+{{- end }}
+{{- if .Values.wombatConfig.enabled }}
+
+Settings saved from the GUI are kept in {{ .Values.hostPath }}/config/wombat.config
+on the node.
+{{- else }}
+
+Settings saved from the GUI are lost when the pod is recreated. Set
+wombatConfig.enabled=true to keep them in {{ .Values.hostPath }}/config.
+{{- end }}
 
 Documentation
 -------------
 
-The documentation is available online at https://wombat-docs.fly.dev/
-
-It can also be found inside the WombatOAM package:
-
-  - in PDF format (as Wombat-Manual.pdf);
-  - in HTML format (in the doc/html directory);
-  - in textual format (in the doc/text directory).
-
-The documentation is also available by clicking on Documentation on the WombatOAM's Web
-Dashboard.
-
-Evaluating WombatOAM
---------------------
-
-Once you have successfully installed WombatOAM, you can try out WombatOAM by
-opening a web browser and hitting http://localhost:8080. Enter
-admin/admin in the appearing login window. To see what functionalities
-are available, add WombatOAM itself to WombatOAM (node: wombat@127.0.0.1,
-cookie: wombat).
-
-WombatOAM features
-------------------
-
-WombatOAM provides the following features for Erlang and Elixir systems,
-among others:
-
-* It detects anomalies and early warning signs, and presents them in
-  the form of alarms and notifications, so that the problems can be
-  resolved before they cause service disruption.
-
-* It provides live information about running systems, helps recover
-  from outages for instance by forcing the GC to free up memory, or
-  fix misconfiguration issues by changing configuration parameters.
-
-* The monitoring functionality is divided into plugins, which run on
-  the managed node and send information (metrics, notifications and
-  alarms) to WombatOAM. A set of built-in plugins are shipped with
-  WombatOAM, which can be turned on and off for each individual managed
-  node.
-
-* It ensures seamless integration with your existing OAM
-  infrastructure by having existing integration with Graphite,
-  DataDog, Graylog, Cacti, Nagios, Splunk, Logstash and PagerDuty
-  with the capability of being integrated with any of the other OAM tools.
-
-* It provides both a Web Dashboard and a REST interface: the former
-  for interactive use, and the latter to support automation and
-  integration.
-
-* It visualizes the node topology and shows information about the
-  nodes such as the application versions running on them.
-
-* It collects more than a hundred built-in metrics about the Erlang
-  VM, such as the amount of memory allocated for different purposes
-  (atom memory, binary memory, etc), and the sum of the length of the
-  message queues of all processes.
-
-* It automatically collects all metrics from the folsom and exometer
-  libraries, all logs from the SASL error_logger, lager and Elixir's
-  Logger libraries, and all alarms from the SASL alarm_handler and elarm
-  libraries.
-
-* The web dashboard can plot both historic metrics and live metrics.
-  Different metrics can be placed on the same graph.
-
-* Besides numeric metrics such as counter and gauges, it supports
-  meters, spirals and histograms.
-
-* It can deploy Erlang nodes in the cloud or on specified machines.
-
---------------------------------------
-
-* When using SSL, the minimum recommended Erlang version for running
-  WombatOAM is R16B02. Without SSL the minimum required Erlang version is
-  still R15B03, and WombatOAM can still manage nodes running on R14B04
-  or later versions regardless of using SSL or not.
-
-* Some browsers refuse to accept the self-signed certificates shipped
-  with WombatOAM with certain Erlang/OTP versions. In that case you
-  should either install proper certificates or switch to HTTP. See the
-  "Configuration" section of the manual for the details.
+The documentation is available online at https://wombat-docs.fly.dev/ and from
+the Documentation link in the WombatOAM web dashboard.
 
 How to contact us
 -----------------
 
 If you have any questions or problems, please:
 
-* First check the WombatOAM Manual for the documentation.
+* First check the WombatOAM documentation.
 
 * If you don't find an answer there, please send an email to
   wombat@erlang-solutions.com.
 
 * If you are facing a technical issue, please execute
-  scripts/wombat-debug.sh and send the generated tar ball to us.
+  scripts/wombat-debug.sh in the pod and send the generated tar ball to us.
 
 Regards,
 WombatOAM Team
