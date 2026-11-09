@@ -6,6 +6,20 @@ metadata:
   labels:
     app: wombat
 spec:
+  {{- if .Values.wombatConfig.enabled }}
+  initContainers:
+  # Seed <hostPath>/config/wombat.config from the image on first start;
+  # WombatOAM needs the file to exist and rewrites it in place.
+  - name: seed-wombat-config
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+    command:
+    - sh
+    - -c
+    - '[ -s /seed/wombat.config ] || cp /wombat/_build/default/rel/wombat/files/wombat.config /seed/wombat.config'
+    volumeMounts:
+    - mountPath: /seed
+      name: wombat-config
+  {{- end }}
   containers:
   - name: wombat
     {{- if .Values.resources }}
@@ -20,6 +34,10 @@ spec:
       name: wombat-logs
     - mountPath: /wombat/license.lic_key
       name: wombat-license
+    {{- if .Values.wombatConfig.enabled }}
+    - mountPath: /wombat/_build/default/rel/wombat/files
+      name: wombat-config
+    {{- end }}
     ports:
     - containerPort: 8080
     env:
@@ -52,3 +70,9 @@ spec:
     hostPath:
       path: {{ .Values.hostPath }}/license.lic_key
       type: File
+  {{- if .Values.wombatConfig.enabled }}
+  - name: wombat-config
+    hostPath:
+      path: {{ .Values.hostPath }}/config
+      type: DirectoryOrCreate
+  {{- end }}
