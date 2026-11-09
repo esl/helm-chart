@@ -32,7 +32,7 @@ The docker image contains the all the necessary prerequisites (Erlang) to run Wo
 
 To learn more about the application please visit the [Documentation page][].
 
-[Documentation page]: https://wombat-docs.fly.dev/
+[Documentation page]: https://wombat-docs.fly.dev/kubernetes.html
 
 ## Useful commands
 To use these commands it is needed to exec into the pod where WombatOAM is running.
