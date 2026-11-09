@@ -13,13 +13,13 @@ entries:
           description: Install notes describe the Kubernetes installation and the WombatOAM version installed
       artifacthub.io/links: |
         - name: Documentation
-          url: https://wombat-docs.fly.dev/
+          url: https://wombat-docs.fly.dev/kubernetes.html
     apiVersion: v2
     appVersion: 4.2.3
-    created: "2026-11-09T19:39:27.175837+01:00"
+    created: "2026-11-09T20:04:09.116702+01:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: ebb470d04dcd15f9ac8cbffa4c92f4bc90f47b4cf3cc6886f7401663eb86add7
+    digest: 0d1cbe706065a42285c51b310b5c560b5c8ca74b4167aa7b8ebf1c8edd29e44b
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
@@ -237,4 +237,4 @@ entries:
     urls:
     - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
     version: 3.7.0
-generated: "2026-11-09T19:39:27.175302+01:00"
+generated: "2026-11-09T20:04:09.116067+01:00"

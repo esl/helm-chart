@@ -42,8 +42,9 @@ wombatConfig.enabled=true to keep them in {{ .Values.hostPath }}/config.
 Documentation
 -------------
 
-The documentation is available online at https://wombat-docs.fly.dev/ and from
-the Documentation link in the WombatOAM web dashboard.
+The Kubernetes guide is at https://wombat-docs.fly.dev/kubernetes.html, and the
+rest of the documentation at https://wombat-docs.fly.dev/ and from the
+Documentation link in the WombatOAM web dashboard.
 
 How to contact us
 -----------------
