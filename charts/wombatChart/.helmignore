@@ -21,3 +21,7 @@
 .idea/
 *.tmproj
 .vscode/
+# Packaged releases and the repository index kept next to the chart: they
+# must not end up inside the package.
+*.tgz
+index.yaml

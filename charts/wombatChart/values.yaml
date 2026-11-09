@@ -86,4 +86,11 @@ kubernetesDiscovery:
 
 hostPath: ""
 
+# Keep wombat.config, where the settings saved from the GUI are written
+# (e.g. Configuration > Email and SMTP, Kubernetes), in <hostPath>/config so
+# that they survive the pod being recreated. On first start the file is
+# copied from the image. Off by default.
+wombatConfig:
+  enabled: false
+
 epmdPort: 4369

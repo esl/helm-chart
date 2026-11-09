@@ -5,15 +5,19 @@ entries:
       artifacthub.io/changes: |
         - kind: changed
           description: Updated to WombatOAM version 4.2.3
+        - kind: added
+          description: wombatConfig.enabled keeps wombat.config (settings saved from the GUI) in hostPath
+        - kind: fixed
+          description: The package no longer contains the older chart packages
       artifacthub.io/links: |
         - name: Documentation
           url: https://wombat-docs.fly.dev/
     apiVersion: v2
     appVersion: 4.2.3
-    created: "2026-11-09T18:13:40.916118+01:00"
+    created: "2026-11-09T19:35:33.264913+01:00"
     description: An operations, monitoring, maintenance, and performance for Erlang
       OTP based systems running inside Kubernetes.
-    digest: 84541896a8b78acb5996dc1f8546b0027bd9f0452327a1e7cc1dd348306aa057
+    digest: b75341ebf8777f79b9cc26fe9afc974a44e4e65bac02af33264918a418679d42
     home: https://www.erlang-solutions.com/products/wombatoam.html
     icon: https://esl.github.io/helm-chart/icons/Wombat_OAM_logo.png
     keywords:
@@ -231,4 +235,4 @@ entries:
     urls:
     - https://esl.github.io/helm-chart/charts/wombatChart/wombat-3.7.0.tgz
     version: 3.7.0
-generated: "2026-11-09T18:13:40.903342+01:00"
+generated: "2026-11-09T19:35:33.264594+01:00"
