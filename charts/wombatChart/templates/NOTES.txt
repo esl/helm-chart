@@ -24,11 +24,18 @@ Kubernetes discovery
 Pods behind the service "{{ $d.service }}" in the namespace "{{ $d.namespace }}"
 are added automatically as nodes named {{ $d.appname }}@<pod IP>.
 {{- else }}
-
-Kubernetes discovery is off: set all of kubernetesDiscovery.service, namespace,
-appname and cookie to add the pods of a service automatically. Nodes can always
-be added from the WombatOAM GUI.
+{{- $unset := list }}
+{{- range $k := list "service" "namespace" "appname" "cookie" }}
+{{- if not (index $d $k) }}{{ $unset = append $unset $k }}{{ end }}
 {{- end }}
+
+Not set in the chart: {{ join ", " $unset }}. Set them under Configuration >
+Kubernetes in the WombatOAM GUI to add the pods of a service automatically,
+or in kubernetesDiscovery. Nodes can always be added from the GUI.
+{{- end }}
+
+Values set in the chart are read-only in the GUI. The license must permit
+Kubernetes; otherwise WombatOAM shows a banner saying so and manages no nodes.
 {{- if .Values.wombatConfig.enabled }}
 
 Settings saved from the GUI are kept in {{ .Values.hostPath }}/config/wombat.config

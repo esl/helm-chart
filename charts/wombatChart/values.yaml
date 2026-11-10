@@ -8,7 +8,7 @@ image:
   repository: erlangsolutions/wombatoam
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "4.2.3"
+  tag: "4.3.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -74,6 +74,9 @@ tolerations: []
 
 affinity: {}
 
+# Kubernetes discovery adds the pods behind a service as nodes. A value set
+# here is shown read-only in the WombatOAM GUI (Configuration > Kubernetes);
+# leave a value empty to set it in the GUI instead.
 kubernetesDiscovery:
   namespace: ""
   service: ""
@@ -81,15 +84,19 @@ kubernetesDiscovery:
   cookie: ""
   # Optional: hours a discovered node may be missing from the service DNS
   # before WombatOAM removes it. Leave empty to use WombatOAM's setting
-  # (kubernetes_node_expiry_hours in wombat.config, 120 hours by default).
+  # (120 hours by default), which can be changed in minutes in the GUI.
   nodeExpiryHours: ""
 
+# Directory on the Kubernetes node for WombatOAM's data and logs. Put the
+# license there as license.lic_key before installing; it must permit
+# Kubernetes.
 hostPath: ""
 
 # Keep wombat.config, where the settings saved from the GUI are written
-# (e.g. Configuration > Email and SMTP), in <hostPath>/config so
-# that they survive the pod being recreated. On first start the file is
-# copied from the image. Off by default.
+# (e.g. Configuration > Kubernetes or Email and SMTP), in <hostPath>/config
+# so that they survive the pod being recreated. On first start the file is
+# copied from the image. Off by default; recommended when settings are
+# managed from the GUI.
 wombatConfig:
   enabled: false
 

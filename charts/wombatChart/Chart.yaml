@@ -2,8 +2,8 @@ apiVersion: v2
 name: wombat
 description: An operations, monitoring, maintenance, and performance for Erlang OTP based systems running inside Kubernetes.
 type: application
-version: 4.2.3
-appVersion: 4.2.3
+version: 4.3.0
+appVersion: 4.3.0
 keywords:
 - erlang
 - wombat
@@ -20,13 +20,11 @@ maintainers:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: Updated to WombatOAM version 4.2.3
+      description: Updated to WombatOAM version 4.3.0, which needs a license that permits Kubernetes
     - kind: added
-      description: wombatConfig.enabled keeps wombat.config (settings saved from the GUI) in hostPath
-    - kind: fixed
-      description: The package no longer contains the older chart packages
+      description: Kubernetes discovery values left empty can be set in the WombatOAM GUI (Configuration > Kubernetes); values set in the chart are read-only there
     - kind: changed
-      description: Install notes describe the Kubernetes installation and the WombatOAM version installed
+      description: Install notes say which discovery values are set by the chart and which are left to the GUI
   artifacthub.io/links: |
     - name: Documentation
       url: https://wombat-docs.fly.dev/kubernetes.html
